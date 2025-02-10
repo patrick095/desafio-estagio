@@ -1,0 +1,23 @@
+
+  <mat-toolbar class="example-toolbar">
+    <div class="header-nav-bar">
+      <button mat-icon-button class="example-icon">
+        <mat-icon class="icon-menu">menu</mat-icon>
+      </button>
+      <span>Desafio Fullstack</span>
+    </div>
+
+    <div class="nav-bar">
+      <div class="nav-icon">
+        <button class="icon-home">
+          <mat-icon (click)="home()">home</mat-icon>
+          <span (click)="home()">Início</span>
+        </button>
+        <button class="icon-add">
+          <mat-icon (click)="cadastro()">post_add</mat-icon>
+          <span (click)="cadastro()">Cadastrar</span>
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+

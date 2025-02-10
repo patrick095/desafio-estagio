@@ -1,0 +1,30 @@
+<mat-card class="device-card">
+    <mat-card-header>
+      <mat-card-title>💻 {{ model }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="card-content">
+      <label>Especificações</label>
+      <p><mat-icon class="icon-memory">memory</mat-icon>{{ memory }}</p>
+      <p><mat-icon class="icon-memory">save</mat-icon>{{ storage }}</p>
+      <p><mat-icon class="icon-memory">tv</mat-icon>{{ screen }}</p>
+      <p><mat-icon class="icon-memory">storage</mat-icon>{{ processor }}</p>
+      <p *ngIf="description">
+        <mat-icon class="icon-memory">description</mat-icon>{{ description }}
+      </p>
+      <p *ngIf="newDevice">
+        <mat-icon class="icon-memory">phone_iphone</mat-icon
+        >{{ newDevice ? "Sim" : "Não" }}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions class="buttons">
+      <button mat-stroked-button color="warn" (click)="onDelete()">
+        Apagar
+      </button>
+      <button mat-raised-button color="primary" (click)="onEdit()">
+        Editar
+      </button>
+    </mat-card-actions>
+</mat-card>
+

@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" class="primary-select-input">
+    <mat-label>{{label}}</mat-label>
+    <mat-select [value]="value" (selectionChange)="onSelectChange($event)" >
+        <mat-option *ngFor="let option of options" [value]="option.id">{{option[nome]}}
+        </mat-option  >
+    </mat-select>
+</mat-form-field>

@@ -1,0 +1,74 @@
+.cadastro {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  gap: 30px;
+
+  .content {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .div-title {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+
+      .title {
+        display: flex;
+        font-size: 32px;
+        line-height: normal;
+        margin-top: 20px;
+        margin: 0;
+      }
+    }
+
+    .form-inputs {
+      flex-grow: 1;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
+
+      .input-right {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 40px;
+
+        .radio {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .text-area {
+          width: 100%;
+        }
+      }
+
+      .input-left {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0.5;
+
+        .primary-select-input {
+          min-width: 150px;
+          max-width: 300px;
+          width: 100%;
+        }
+      }
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      gap: 20px;
+    }
+  }
+}

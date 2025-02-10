@@ -1,0 +1,33 @@
+<section>
+  <app-side-bar></app-side-bar>
+  <div class="content">
+      <div class="dispositivos">
+        @for (dispositivo of dispositivos; track dispositivo.id) {
+        <app-card
+          [model]="dispositivo.model.model"
+          [processor]="dispositivo.processor"
+          [memory]="dispositivo.memory"
+          [screen]="dispositivo.screen"
+          [storage]="dispositivo.storage"
+          [description]="dispositivo.description"
+          [newDevice]="dispositivo.newDevice"
+          (delete)="onDelete(dispositivo)"
+          (edit)="onEdit(dispositivo)"
+          [@listAnimation]
+        ></app-card>
+        }
+      </div>
+    </div>
+</section>
+<footer class="paginator">
+  <mat-paginator
+    [length]="50"
+    [pageSize]="pageSize"
+    [pageIndex]="currentPage"
+    [pageSizeOptions]="[6, 12]" 
+    showFirstLastButtons
+    (page)="deviceList($event)"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</footer>

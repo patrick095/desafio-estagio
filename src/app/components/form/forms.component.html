@@ -1,0 +1,67 @@
+
+<section class="form">
+  <app-side-bar></app-side-bar>
+
+  <div class="content">
+    <div class="div-title">
+      <h1 class="title">{{ title }}</h1>
+    </div>
+
+    <form class="form-inputs" [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+      <div class="input-left">
+        <app-primary-select-input
+          formControlName="brandId"
+          label="Marca*"
+          [options]="marcas"
+          [nome]="'brand'"
+        >
+        </app-primary-select-input>
+        <app-primary-select-input
+          formControlName="modelId"
+          label="Modelo*"
+          [options]="modelos"
+          [nome]="'model'"
+        ></app-primary-select-input>
+
+        <app-primary-input
+          formControlName="processor"
+          label="Processador*"
+        ></app-primary-input>
+        <app-primary-input
+          formControlName="memory"
+          label="Memoria* (Gb)"
+        ></app-primary-input>
+        <app-primary-input
+          formControlName="screen"
+          label="Tela* (Pol)"
+        ></app-primary-input>
+        <app-primary-input
+          formControlName="storage"
+          label="Armazenamento* (Gb)"
+        ></app-primary-input>
+      </div>
+
+      <div class="input-right">
+        <mat-radio-group class="radio" formControlName="newDevice">
+          <label>Dispositivo novo</label>
+          <mat-radio-button [value]="true">Sim</mat-radio-button>
+          <mat-radio-button [value]="false">Não</mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field class="text-area">
+          <mat-label>Digite aqui a descrição do dispositivo</mat-label>
+          <textarea
+            matInput
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="10"
+            cdkAutosizeMaxRows="10"
+            formControlName="description"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </form>
+    <div class="buttons">
+      <button mat-stroked-button>Cancelar</button>
+      <button mat-flat-button (click)="onSubmit()">Salvar</button>
+    </div>
+  </div>
+</section>

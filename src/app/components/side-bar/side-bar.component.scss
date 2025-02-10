@@ -1,0 +1,54 @@
+.example-toolbar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 228px;
+  background-color: #292929;
+  color: white;
+
+  .example-icon {
+    color: white;
+  }
+
+  .header-nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    button,
+    span {
+      margin-top: 21px;
+      margin-left: 13px;
+    }
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 140px;
+    margin-left: 30px;
+    .nav-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 20px;
+      width: 100%;
+
+      .icon-home,
+      .icon-add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+        font-size: 1rem;
+        background: none;
+        border: none;
+      }
+    }
+  }
+}
